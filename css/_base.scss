@@ -1,0 +1,302 @@
+$main-color: #42602D;
+$sub-color: #3f2806;//#43341B
+$base-color: #d8dfd8;
+
+$main-black: rgba(0, 0, 0, 0.87);
+$sub-black: rgba(0, 0, 0, 0.54);
+$none-black: rgba(0, 0, 0, 0.38);
+
+$main-white: #FFF;
+$sub-white: rgba(255, 255, 255, 0.7);
+$none-white: rgba(255, 255, 255, 0.3);
+
+$header-height: 64px;
+$wrapper-width: 1024px;
+
+$sans-font: sans-serif;
+$serif-font: 'Cormorant Infant', serif;
+$heading-font: 'Montserrat', sans-serif;
+$caption-font: 'JetBrains Mono', sans-serif;
+
+@mixin tablet {
+
+    @media screen and (max-width:959px) {
+        @content;
+    }
+
+}
+
+@mixin mobile {
+
+    @media screen and (max-width:599px) {
+        @content;
+    }
+
+}
+
+@mixin flex($justify:center,$align:center,$gap:0,$wrap:nowrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+    flex-wrap: $wrap;
+}
+@mixin flex-column($justify:center,$align:center,$gap:0,$wrap:nowrap) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+    flex-wrap: $wrap;
+}
+
+@mixin font($size:16,$weight:400,$spacing:0,$height:32){
+    font-size: $size/10 * 1rem;
+    font-weight: $weight;
+    letter-spacing: $spacing/1000 *1em;
+    line-height: $height/$size;
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body,
+ul,
+h1,
+h2,
+h3,
+h4,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* common */
+
+html{
+    font-size: 62.5%;
+    font-family: $serif-font;
+}
+
+body {
+    @include font(16,500,0,32);
+
+    @include mobile {
+        font-size: 1.5rem;
+    }
+
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+section {
+    padding: 120px 0;
+}
+
+.pc-tablet {
+    display: block;
+
+    @include mobile {
+        display: none;
+    }
+
+}
+
+.sp-only {
+    display: none;
+
+    @include mobile {
+        display: block;
+    }
+
+}
+
+.pc-only {
+    display: block;
+
+    @include tablet {
+        display: none;
+    }
+
+}
+
+.no-scroll {
+    overflow: auto;
+
+    @include tablet {
+        overflow: hidden;
+    }
+
+}
+
+/*object*/
+
+.wrapper {
+    max-width: $wrapper-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+    text-align: center;
+
+    @include tablet{
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+}
+
+
+.heading {
+    @include font(32,700,0,36);
+    color: $sub-color;
+    position: relative;
+    padding-bottom: .5em;
+    //margin-bottom: 2em;　個別指定
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1.5em;
+        height: 2px;
+        border-radius: 1px;
+        background-color: $main-color;
+    }
+
+}
+
+.btn {
+    @include font(15,500,100,30);
+    display: inline-block;
+    border: 1px solid $sub-white;
+    color: $main-white;
+    min-width: 5em;
+    padding: 0 1em;
+}
+
+.btn--more {
+    @include font(15,500,100,30);
+    display: inline-block;
+    position: relative;
+    padding-right: 3em;
+
+    &::before {
+        position: absolute;
+        content:"";
+        background-color: $main-color;
+        height: .5px;
+        width: 2em;
+        top: .4em;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        vertical-align: middle;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: .4em;
+        bottom: 0;
+        right: 2px;
+        margin: auto;
+        transform: rotate(45deg);
+        width: .8em;
+        height: .8em;
+        border-top: 1px solid $main-color;
+        vertical-align: middle;
+    }
+}
+
+/* color */
+
+body {
+    background-color: $main-white;
+    color: $main-black
+}
+
+a {
+    transition: .3s;
+
+    &:hover {
+        opacity: .6;
+        transition: .3s;
+    }
+
+}
+
+/* header */
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 98;
+    width: 100%;
+    color: #fff;
+    background-color: $main-color;
+    box-shadow: 0 0 6px $none-black;
+
+    &__wrapper {
+        @extend .wrapper;
+        height: $header-height;
+        @include flex(space-between,center,0,wrap);
+    }
+
+    &__title {
+        font-size: 3.2rem;
+
+        @include mobile {
+            font-size: 2rem;
+        }
+
+    }
+
+}
+
+.nav {
+    &__container {
+        @include flex(flex-end,center,2em);
+    }
+
+    &__item {
+        list-style: none;
+
+        & a {
+            font-size: 2.0rem;
+
+            @include mobile {
+                font-size: 1.5rem;
+            }
+
+        }
+    }
+
+}
+
+/* footer */
+
+.footer {
+    padding: 1em 0;
+    background-color: $sub-color;
+    color: #fff;
+    font-size: 1.4rem;
+}
+

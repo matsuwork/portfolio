@@ -1,0 +1,52 @@
+%scroll-effect {
+    opacity:1;
+    transform: translateY(0);
+    transition:.5s ease-out;
+
+    &.is-hide {
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+}
+
+.heading {
+    opacity:1;
+    transform:scaleX(1);
+    transition: .5s;
+
+    &::after {
+        transition: .5s;
+        transition-delay: .3s;
+    }
+
+    &.is-hide {
+        opacity:0;
+        transform:scaleX(0);
+
+        &::after {
+            width:0;
+        }
+    }
+}
+
+.header {
+    transform: translateY(0);
+    transition: .4s ease-out;
+
+    &.is-unpinned {
+        -webkit-transform: translateY(-120%);
+        transform: translateY(-120%);
+    }
+
+}
+
+.header__wrapper {
+    transition: .5s ease-in .25s;
+    opacity: 1;
+
+    &.is-hide {
+        opacity: 0;
+    }
+
+}

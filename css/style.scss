@@ -1,0 +1,213 @@
+@import "base";
+
+/* index main */
+.top {
+    position: relative;
+    color: #fff;
+    height: calc(90vh - #{$header-height});
+    max-height: 720px;
+    @include flex();
+
+    &__wrapper {
+        @extend .wrapper;
+    }
+
+    &__img {
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        @include font(40,700,100,32);
+        color: $main-white;
+    }
+
+    &__text {
+        @include font(16,500,100,32);
+        color: $sub-white;
+        margin: 1em 0;
+    }
+
+    &::before {
+        z-index: -1;
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: $main-color;
+    }
+}
+
+.about {
+    &__heading {
+        @extend .heading;
+        margin-bottom: 2em;
+    }
+
+    &__container {
+        max-width: 640px;
+        margin: 0 auto;
+        @include flex(space-between,center,32px);
+
+        @include mobile {
+            @include flex-column(center,center,32px);
+        }
+
+    }
+
+    &__img {
+        border-radius: 50%;
+        width: 10%;
+        flex: 1 1 auto;
+
+        @include mobile {
+            width: 160px;
+        }
+
+    }
+
+    &__text {
+        text-align: left;
+        width: 440px;
+        flex: 0 0 auto;
+
+        @include mobile {
+            width: 84%;
+            margin: 0 auto;
+            max-width: 440px;
+        }
+
+    }
+}
+
+.skill {
+    &__heading {
+        @extend .heading;
+        margin-bottom: 2em;
+    }
+
+    &__container {
+        margin: 0 auto;
+        @include flex(space-between,flex-start,0,wrap);
+
+        @include mobile {
+            @include flex-column(center,center);
+        }
+
+    }
+
+    &__item {
+        width: 31%;
+        margin-bottom: 64px;
+
+        @include tablet {
+            width: 48%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+    }
+
+    &__title {
+        @include font(20,700,100,40);
+        margin-bottom: .5em;
+    }
+
+    &__lists {
+        font-size: 1.4rem;
+        list-style: inside url(../img/checkbox.png);
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    &__list {
+        text-align: left;
+        border-bottom: 1px dashed $sub-black;
+        padding: .5em 0;
+    }
+
+    &__list:first-of-type {
+        border-top: 1px dashed $sub-black;
+    }
+
+}
+
+.works {
+    background-color: $base-color;
+
+    &__heading {
+        @extend .heading;
+        margin-bottom: 2em;
+    }
+
+    &__container {
+        max-width: 816px;
+        margin: 0 auto 16px;
+        @include flex(flex-start,stretch,0,wrap);
+
+        @include tablet {
+            max-width: 544px;
+        }
+
+        @include mobile {
+            max-width: 272px;
+        }
+
+    }
+
+    &__item {
+        width: 272px;
+        font-family: $sans-font;
+        text-align: left;
+        border: 1px solid transparent;
+        padding: 16px;
+
+        &:hover {
+            border: 1px solid $sub-black;
+            transition: .3s;
+        }
+    }
+
+    &__img {
+        display: inline-block;
+        background-color: $sub-black;
+        color: #fff;
+        width: 240px;
+        height: 240px;
+        object-fit: cover;
+        margin-bottom: 8px;
+        transition: .3s;
+    }
+
+    &__caption {
+        @include font(10,400,0,10);
+        display: block;
+        font-family: $caption-font;
+    }
+
+    &__title {
+        @include font(16,700,0,16);
+    }
+
+}
+
+.contact {
+    background-color: $sub-color;
+    color: #fff;
+
+    &__heading{
+        @extend .heading;
+        margin-bottom: 2em;
+        color: $main-white;
+
+        &::after {
+            background-color: $base-color;
+        }
+    }
+
+}
+
+@import "js";

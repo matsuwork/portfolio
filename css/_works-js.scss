@@ -1,0 +1,24 @@
+@import "base-js";
+
+.works__img,
+.works__detail,
+.works__lead {
+    $parent :'%scroll-effect';
+    @extend #{$parent};
+
+    &.is-hide {
+        @extend #{$parent}.is-hide;
+    }
+
+}
+
+.modal {
+    transition: .4s ease-out;
+
+    &.is-show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+}
+

@@ -1,0 +1,81 @@
+@import "base-js";
+
+.top__wrapper {
+    opacity:1;
+    transition: .5s ease-in;
+
+    &.is-hide {
+        opacity:0;
+    }
+
+}
+
+.header {
+    transition: transform .4s ease-out;
+    box-shadow: none;
+    background-color: transparent;
+
+    &.is-scroll {
+        background-color: $main-color;
+        box-shadow: 0 0 6px $none-black;
+    }
+
+}
+
+.btn--more,
+.about__img,
+.about__item,
+.skill__item,
+.works__item {
+    $parent :'%scroll-effect';
+    @extend #{$parent};
+
+    &.is-hide {
+        @extend #{$parent}.is-hide;
+    }
+
+}
+
+.works__item {
+    //pc
+    &:nth-child(3n+2) {
+        transition-delay: .12s;
+
+        @include tablet {
+            transition-delay: 0s;
+        }
+
+    }
+
+    &:nth-child(3n) {
+        transition-delay: .24s;
+
+        @include tablet {
+            transition-delay: 0s;
+        }
+
+    }
+
+    //tablet
+
+    &:nth-child(2n+1) {
+
+        @include tablet {
+            transition-delay: 0s;
+        }
+
+    }
+
+    &:nth-child(2n) {
+
+        @include tablet {
+            transition-delay: .12s;
+        }
+
+        @include mobile {
+            transition-delay: 0s;
+        }
+
+    }
+
+}

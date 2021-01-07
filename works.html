@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="松田茜のポートフォリオです。">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/works.css">
+  <title>Works｜Portfolio</title>
+</head>
+<body>
+  <header class="header">
+      <div class="header__wrapper is-hide">
+        <h2 class="header__title"><a href="index.html">Portfolio</a></h2>
+        <nav class="nav">
+          <ul class="nav__container">
+            <li class="nav__item"><a href="works.html">WORKS</a></li>
+            <li class="nav__item"><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+  </header>
+    <main>
+      <section class="works">
+        <div class="wrapper">
+          <h3 class="works__heading is-hide">WORKS</h3>
+          <p class="works__lead is-hide">画像クリックでページ全体のイメージが表示されます。</p>
+          <div class="works__container">
+            <div class="works__item" id="clinic">
+              <img class="works__img is-hide" src="img/clinic-thumb.png" alt="" data-img="img/clinic.png">
+              <div class="works__detail is-hide">
+                <span class="works__caption">Coding Practice</span>
+                <span class="works__title">石井総合内科クリニック</span>
+                <a class="works__link" href="https://matsuwork.shop/works/clinic/">https://matsuwork.shop/works/clinic/</a>
+                <p class="works__text">[BASIC認証]　ID：clinicuser01　PASS：clinicpass01
+                <br>しょーごさんが配布されているXDデザインカンプからのコーディング練習です。<br class="pc-only">トップページ１ページ。デザインはPCのみですがレスポンシブ対応しています。</p>
+                <p class="works__language"><span>使用言語</span>HTML,CSS(Sass)</p>
+                <p class="works__footer">
+                  <span></span>
+                  <span class="works__design">designed by <a href="https://note.com/samuraibrass/n/n1622c507b9c7?magazine_key=mad296098d928">Shogo</a></span>
+                </p>
+              </div>
+            </div>
+            <div class="works__item" id="cresta">
+              <img class="works__img is-hide" src="img/cresta-thumb.png" alt="" data-img="img/cresta.png">
+              <div class="works__detail is-hide">
+                <span class="works__caption">Coding Practice</span>
+                <span class="works__title">DIGSMILE INC.</span>
+                <a class="works__link" href="https://matsuwork.github.io/cresta-third/">https://matsuwork.github.io/cresta-third/</a>
+                <p class="works__text">クリ★スタさんが公開されているXDデザインカンプからのコーディング練習です。<br class="pc-only">トップページ含めて３ページです。（TOP/ABOUT/CONTACT）</p>
+                <p class="works__language"><span>使用言語</span>HTML,CSS(Sass)/JavaScript(jQuery)</p>
+                <p class="works__footer">
+                  <a class="works__code" href="https://github.com/matsuwork/cresta-third">GitHub</a>
+                  <span class="works__design">designed by <a href="https://crestadesign.org/cording-third/">Cresta</a></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div><!--container end-->
+      </section>
+      <section class="contact" id="contact">
+        <div class="wrapper">
+          <h2 class="contact__heading is-hide">CONTACT</h2>
+          <p class="contact__text">お気軽にお問い合わせください。
+            <br>info@matsuwork.shop
+          </p>
+        </div>
+      </section>
+      <div class="modal">
+        <img class="modal__img" src="">
+        <a class="modal__close">× close</a>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="wrapper">
+        <p class="footer__credit">© Matsuda Akane, All Rights Reserved.</p>
+      </div><!--wrapper-->
+    </footer>
+    <script src="js/works.js"></script>
+</body>
+</html>

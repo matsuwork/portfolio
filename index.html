@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="松田茜のポートフォリオです。">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Portfolio</title>
+</head>
+<body>
+  <header class="header">
+      <div class="header__wrapper is-hide">
+        <h1 class="header__title"><a href="index.html">Portfolio</a></h1>
+        <nav class="nav">
+          <ul class="nav__container">
+            <li class="nav__item"><a href="works.html">WORKS</a></li>
+            <li class="nav__item"><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+  </header>
+    <main>
+      <section class="top">
+        <div class="top__wrapper is-hide">
+          <img class="top__img" src="img/logo.svg" alt="" width="40" height="40">
+          <h2 class="top__title">Matsuda Akane</h2>
+          <p class="top__text">HTML CODER<br>HTML5/CSS3/JavaScript/WordPress</p>
+        </div>
+      </section>
+      <section class="about">
+        <div class="wrapper">
+          <h3 class="about__heading is-hide">ABOUT</h3>
+          <div class="about__container">
+            <img class="about__img is-hide" src="img/profile.jpg" alt="" width="160" height="160">
+            <div class="about__item is-hide">
+              <p class="about__text">
+                ポートフォリオをご覧いただきありがとうございます。
+                <br class="pc-tablet">松田茜と申します。大阪在住の主婦です。
+                <br class="pc-tablet">２歳の息子を育てながら、コーディングをしております。
+                <br class="pc-tablet">保守性が高く、破綻しにくいCSS設計を心掛けております。
+                <br class="pc-tablet">よろしくお願いいたします。
+              </p>
+            </div>
+          </div>
+        </div><!--wrapper end-->
+      </section>
+      <section class="skill">
+        <div class="wrapper">
+          <h3 class="skill__heading is-hide">SKILL</h3>
+          <div class="skill__container">
+            <div class="skill__item is-hide">
+              <p class="skill__title">HTML/CSS</p>
+              <ul class="skill__lists">
+                <li class="skill__list">デザインカンプに忠実なコーディング</li>
+                <li class="skill__list">レスポンシブ対応</li>
+                <li class="skill__list">BEM等の命名規則やSASS</li>
+              </ul>
+            </div>
+            <div class="skill__item is-hide">
+              <p class="skill__title">JavaScript</p>
+              <ul class="skill__lists">
+                <li class="skill__list">アニメーション演出</li>
+                <li class="skill__list">スライダーなどの実装</li>
+                <li class="skill__list">（鋭意学習中です）</li>
+              </ul>
+            </div>
+            <div class="skill__item is-hide">
+              <p class="skill__title">WordPress</p>
+              <ul class="skill__lists">
+                <li class="skill__list">既存テーマの修正、カスタマイズ</li>
+                <li class="skill__list">静的HTMLページのWordPress化</li>
+                <li class="skill__list">プラグインを使用した各種機能の実装</li>
+              </ul>
+            </div>
+          </div><!--container end-->
+        </div><!--wrapper end-->
+      </section>
+      <section class="works">
+        <div class="wrapper">
+          <h3 class="works__heading is-hide">WORKS</h3>
+          <div class="works__container">
+            <a class="works__item is-hide" href="works.html#clinic">
+              <img class="works__img" src="img/clinic-thumb.png" alt="">
+              <span class="works__caption">Coding Practice</span>
+              <span class="works__title">石井総合内科クリニック</span>
+            </a>
+            <a class="works__item is-hide" href="works.html#cresta">
+              <img class="works__img" src="img/cresta-thumb.png" alt="">
+              <span class="works__caption">Coding Practice</span>
+              <span class="works__title">cresta third</span>
+            </a>
+          </div>
+          <a class="btn--more is-hide" href="works.html">詳しく見る</a>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="wrapper">
+          <h2 class="contact__heading is-hide">CONTACT</h2>
+          <p class="contact__text">お気軽にお問い合わせください。
+            <br>info@matsuwork.shop
+          </p>
+        </div>
+
+
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrapper">
+        <p class="footer__credit">© Matsuda Akane, All Rights Reserved.</p>
+      </div><!--wrapper-->
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
